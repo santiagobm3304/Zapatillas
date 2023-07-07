@@ -1,0 +1,6 @@
+.carrito{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}

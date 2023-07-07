@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <form (submit)="submitForm()">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Identificador</label>
+            <input type="number" [(ngModel)]="producto._id" name="_id" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre Producto</label>
+            <input type="text" [(ngModel)]="producto.nombre" name="nombre" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Marca</label>
+            <input type="text" [(ngModel)]="producto.marca" name="marca" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Descripcio</label>
+            <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Imagen</label>
+            <input type="text" [(ngModel)]="producto.imgURL" name="imgURL" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Tipo</label>
+            <input type="text" [(ngModel)]="producto.tipo" name="tipo" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Precio</label>
+            <input type="number" [(ngModel)]="producto.precio" name="precio" class="form-control" id="exampleFormControlInput1" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>

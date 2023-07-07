@@ -1,0 +1,13 @@
+<div class="container p-5">
+    <div class="d-flex">
+        <input class="form-control mb-3" type="text" placeholder="Buscar producto" #txtSearch
+            (keyup)="onSearchProduct(txtSearch.value)">
+        <a class="btn" *ngIf="this.authService.getToken()" routerLink="/new"><i class="fa-sharp fa-solid fa-plus"></i></a>
+    </div>
+    <div class="row">
+        <div *ngFor="let product of products | filtroProduct:search" class="card col-md-4 mx-auto mt-2 mb-2"
+            style="width: 16rem;">
+            <app-card-product [product]="product"></app-card-product>
+        </div>
+    </div>
+</div>

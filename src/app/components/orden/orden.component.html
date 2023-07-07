@@ -1,0 +1,19 @@
+<form (submit)="submitOrder()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Número de Telefono</label>
+        <input type="number" name="nroventa" class="form-control" id="exampleInputEmail1" [(ngModel)]="venta.nroventa">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Nombre de Comprador</label>
+        <input type="text" name="nombre" class="form-control" id="exampleInputPassword1" [(ngModel)]="venta.nombre">
+    </div>
+    <label>Tus Productos</label>
+    <div *ngFor="let myprods of misProductos">
+        <input type="text" [value]="myprods" disabled>
+    </div>
+    <div class="form-group">
+        <label>Total</label>
+        <input type="text" [value]="montoTotal" disabled>
+    </div>
+    <button type="submit" class="btn btn-primary">Comprar</button>
+</form>

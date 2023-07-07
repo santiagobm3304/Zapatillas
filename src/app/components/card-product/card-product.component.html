@@ -1,0 +1,8 @@
+<img src="{{product.imgURL}}" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">{{product.nombre}}</h5>
+    <p class="card-text">{{product.descripcion}}</p>
+    <p class="card-text">S/.{{product.precio}}</p>
+    <a routerLink="/product/{{product._id}}" class="btn btn-primary">Ver</a>
+    <a class="btn" (click)="agregarProduct(product._id)"><i class="fa-solid fa-cart-plus"></i></a>
+</div>
